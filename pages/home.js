@@ -4,21 +4,31 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="container">
-      <Head>
-        <title>Blob</title>
-        <link rel="icon" href="/logo1.png" />
-        </Head>
 
-        <main>
-                
-                <h1 className="title">
-                     Bem vindo ao Blob
-                </h1>
-                  <p className="description">
-                    esperamos que o blob possa te ajudar como leitor, tanto quanto ajuda a nós como editores
-                </p>
+      <Head>
+        <title>B\ob</title>
+        <link rel="icon" href="/logo1.png" />
+      </Head>
+
+        <navbar>
+            <navlogo>
+              <img src=" /logo1.svg " alt="logo1" className="logoNav" />
+              <p>B/ob</p>
+            </navlogo>
+
+            <navlinks>
+              <Link href=""><a>./bios</a></Link>
+              <Link href=""><a>./posts</a></Link>
+            </navlinks>
+        </navbar> 
+
+      <main>
+        <div className="navbar">
+        </div>    
+         <h1 className="title">Bem vindo ao B\ob</h1>
+          <p className="description"> Apenas mais um compendium de informações</p>
             
-                <div className="grid">
+        <div className="grid">
           <a href="/posts" className="card">
             <h3>Posts &rarr;</h3>
             <p>Lista dos nossos posts</p>
@@ -31,20 +41,53 @@ export default function Home() {
 
           
         </div>
-        </main>
-        <footer>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src=" /logo1.svg" alt="logo1" className="logo" />
-        </a>
+      </main>
+      <footer>
+        <div className="footerbox">
+          <a target="_blank" rel="noopener noreferrer">
+            <img src=" /logo1.svg " alt="logo1" className="logo" />
+          </a>
+        </div>
       </footer>
-        <style jsx>{`
+        <style jsx>{`  
+
+        navbar{
+          background:#202020;
+          width:100%;
+          min-height: 33%;
+          padding: 0;
+          margin: 0;
+          padding:0 20% 0 20%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+        }
+        navlogo{
+          color: #dcdcdc;
+          display: flex;
+          flex-direction: row;
+          align-items: center; 
+        }
+    
+
+        navlinks a{
+          margin: 0 0 0 15vh;
+        }
+
+        navlinks a:hover{
+          color: #ffa500;
+          border-bottom: 3px solid #ffa500;
+          font-style: bold;
+        }
+
+        .logoNav{
+          width:60px;
+        }
+
         .container {
-          background-color: #004400;
+          background:url("images/headerb.jpg");
           min-height: 100vh;
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -52,8 +95,8 @@ export default function Home() {
         }
 
         main { 
-          background-color: #004400;
-          padding: 5rem 0;
+          width: 66%;
+          padding: 3rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -63,12 +106,20 @@ export default function Home() {
         }
 
         footer {
+          margin: 1rem 0 0 0;
+          background: #202020;
           width: 100%;
-          height: 100px;
-          border-top: 1px solid #adff2f;
+          height: 7vh;
+          border-top: 1px solid #bcbcbc;
           display: flex;
           justify-content: center;
           align-items: center;
+          transition: border-color 0.5s ease
+        }
+
+      
+        Footer:hover{
+          border-color: #adff2f
         }
 
         footer img {
@@ -101,25 +152,38 @@ export default function Home() {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
+          transition: color 0.5s ease
         }
 
         .title,
         .subtitle,
         .description {
-          color: 	#bcbcbc;
+          color: 	black;
           text-align: center;
+          font-family: 'Inter', sans-serif;
+        }
+        
+        .title:hover{
+          color: #ffa500;
+        } 
+        
+        .description:hover{
+          color: #adff2f;
         }
 
         
         .subtitle {
           margin: 0;
+          color: 	#bcbcbc;
           line-height: 1.5;
           font-size: 1.7rem;
+          text-align: center;
         }
 
-        .description {
+        .description, {
           line-height: 1.5;
           font-size: 1.5rem;
+          transition: color 0.5s ease
         }
 
         code {
@@ -136,29 +200,28 @@ export default function Home() {
           align-items: left;
           justify-content: center;
           flex-wrap: flex;
-
-          max-width: 800px;
+          width: 80%;
           margin-top: 4rem;
         }
 
 
         .card {
+          background: #f0f0f0;
           margin: 1rem;
           flex-basis: 45%;
           padding: 2rem;
           text-align: center;
-          color: 	#bcbcbc;
+          color: 	black;
           text-decoration: none;
-          border: 1px solid;
+          border: 1px solid #bcbcbc;
           border-radius: 15px;
-          transition: color 0.5s ease, border-color 0.5s ease;
+          transition: 0.5s ease;
         }
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #adff2f;
-          border-color: #adff2f;
+        .card:hover {
+          color: #004000;
+          border-color: #004000;
+          transform: scale(1.1);
         }
 
         .card h3 {
@@ -166,14 +229,14 @@ export default function Home() {
           font-size: 1.5rem;
         }
 
-        .card p {
+        .card p {}
           margin: 0;
           font-size: 1.25rem;
           line-height: 1.5;
         }
 
         .logo {
-          height: 5em;
+          height: 2em;
         }
 
         @media (max-width: 600px) {
