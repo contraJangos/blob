@@ -13,15 +13,53 @@ body {
 }
 
 a {
-  color: #0070f3;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.card {
+  background: #f0f0f0;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: black;
+  border: 1px solid #bcbcbc;
+  border-radius: 15px;
+  transition: 0.5s ease;
+  min-width: 200px;
+  max-width: 200px;
+}
+.card:hover {
+  color: #ffa500;
+  border-color: #ffa500;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.socialMediaIcon {
+  height: 50px;
+  padding: 10px;
 }
