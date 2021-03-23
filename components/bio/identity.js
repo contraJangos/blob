@@ -9,10 +9,10 @@ export default function Identity({ name, description }) {
         <h1>{name}</h1>
         <Image
           priority
-          src={`/images/${name}.jpg`}
+          src={`/images/profile/${name}.jpg`}
           className={utilStyles.borderCircle}
-          height={144}
-          width={144}
+          height={200}
+          width={200}
           alt="Profile pic"
           objectFit="cover"
         />
