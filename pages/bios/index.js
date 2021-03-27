@@ -11,7 +11,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Bios() {
-  const names = ["Guilherme", "Fabio", "Juliane"];
+  const names = [
+    "Guilherme",
+    "Fabio",
+    "Juliane",
+  ];
 
   return (
     <Layout>

@@ -8,8 +8,8 @@
 }
 
 .navbar .content {
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -32,4 +32,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar a span {
+  width: 20px;
+  padding-right: 5px;
 }
