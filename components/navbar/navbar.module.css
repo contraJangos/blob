@@ -1,3 +1,12 @@
+.preNav {
+  background-color: white;
+  width: 100%;
+  min-height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar {
   background: #2b2d2f;
   width: 100%;

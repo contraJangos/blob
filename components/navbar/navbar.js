@@ -9,7 +9,16 @@ export default function Navbar() {
   return (
     <div>
       <div className={styles.preNav}>
-        
+        <div>
+          <Image
+            priority
+            src={`/blob.png`}
+            height={70}
+            width={180}
+            alt="logo"
+            objectFit="fill"
+          />
+        </div>
       </div>
       <div className={styles.navbar}>
         <div className={styles.content}>
