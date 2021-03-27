@@ -2,7 +2,7 @@ import styles from "./post.module.css";
 
 export default function Post({ header, title, description }) {
   return (
-    <div>
+    <div className={styles.postContainer}>
       <div className={styles.postHeader}>
         <p>{header.date}</p>
         <p>-</p>

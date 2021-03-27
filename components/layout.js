@@ -20,7 +20,9 @@ export default function Layout({ children }) {
       <navbar>
         <Navbar></Navbar>
       </navbar>
-      <main className={styles.container}>{children}</main>
+      <main className={styles.container}>
+        <div className="grid">{children}</div>
+      </main>
       <footer>
         <Footer></Footer>
       </footer>

@@ -1,6 +1,5 @@
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import Image from "next/image";
 
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,25 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Navbar() {
   return (
     <div>
-      <div className={styles.preNav}>
-        <div>
-          <Image
-            priority
-            src={`/blob.png`}
-            height={70}
-            width={180}
-            alt="logo"
-            objectFit="fill"
-          />
-        </div>
-      </div>
       <div className={styles.navbar}>
         <div className={styles.content}>
-          <div className={styles.item}>
+          <div className={styles.home}>
             <Link href="/">
               <a>
                 <span>
-                  <FontAwesomeIcon icon={faTerminal} size="lg" color="white" />
+                  <FontAwesomeIcon icon={faTerminal} />
                 </span>
                 /home
               </a>
@@ -53,7 +40,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className={styles.item}>
-            <Link href="/posts">
+            <Link href="/contact">
               <a>
                 <span>
                   <FontAwesomeIcon icon={faTerminal} />
