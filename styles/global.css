@@ -8,6 +8,10 @@ body {
   font-size: 18px;
 }
 
+section {
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,7 +30,9 @@ img {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 600px) {
@@ -45,8 +51,8 @@ img {
   border: 1px solid #bcbcbc;
   border-radius: 15px;
   transition: 0.5s ease;
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 300px;
+  max-width: 300px;
 }
 .card:hover {
   color: #ffa500;

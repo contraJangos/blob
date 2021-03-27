@@ -1,12 +1,27 @@
 .layout {
   width: 100%;
-  overflow-y: hidden;
+  height: 100%;
+  padding: 0;
 }
 
 .container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  padding: 10px;
+  margin: 0 12rem 90px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 0 6rem 90px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 0 90px;
+    text-align: center;
+  }
 }
 
 .header {

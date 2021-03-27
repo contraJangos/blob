@@ -17,11 +17,12 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}></header>
       <navbar>
         <Navbar></Navbar>
       </navbar>
-      <main className={styles.container}>{children}</main>
+      <main className={styles.container}>
+        <div className="grid">{children}</div>
+      </main>
       <footer>
         <Footer></Footer>
       </footer>
